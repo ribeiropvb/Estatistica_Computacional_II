@@ -1,7 +1,7 @@
 r_beta <- function(n,r,b){
   library(tidyverse)
   
-  # Função para gerar exponenciais
+  # Funcao para gerar exponenciais
   
   r_exp <- function(n, lambda){
     u=runif(n)
@@ -9,7 +9,7 @@ r_beta <- function(n,r,b){
     return(x)
   }
   
-  # Função para gerar Gama
+  # Funcao para gerar Gama
   
   r_gamma <- function(n, r, lambda){
     library(tidyverse)
@@ -18,6 +18,10 @@ r_beta <- function(n,r,b){
       map_dbl(sum)
     return(x)
   }
+  
+  # Gerar gama por X/(X+Y)
+  # Tal que o primeiro parametro, da Beta, e' herdado de X
+  # e o segundo parametro e' herdade de Y
   
   X <- r_gamma(n,r,1)
   Y <- r_gamma(n,b,1)

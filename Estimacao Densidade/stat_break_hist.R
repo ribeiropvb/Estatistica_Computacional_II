@@ -1,7 +1,3 @@
-set.seed(2022)
-n <- 100
-x <- rnorm(n)
-
 Sturges <- function(x){
   n <- length(x)
   nclasses <- ceiling(1 + log2(n)) #quantidade de classes

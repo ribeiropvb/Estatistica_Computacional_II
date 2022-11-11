@@ -8,6 +8,7 @@ stat_break_hist <- function(x, type = c('sturges','scott','FD')){
     , sturges = diff(range(x) / ceiling(1 + log2(n)))
     , scott = 3.49*sd(x)*n^(-1/3)
     , FD = 2*IQR(x)*n^(-1/3)
+    , stop("unknown 'breaks' algorithm")
   )
   min_ <- min(x)
   max_ <- max(x)

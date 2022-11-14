@@ -11,7 +11,7 @@ stat_kernel <- function(X, h, x, kernel = c('gaussian','epanechnikov','rectangul
     , triangular = ifelse(abs(t)<1,1 - abs(t),0)
     , biweight = ifelse(abs(t)<1,15*(1-t^2)^2/16,0)
     , cosine = ifelse(abs(t)<1,(pi/4)*cos(.5*pi*t),0)
-    , stop("unknown 'breaks' algorithm")
+    , stop("unknown 'kernel'")
   )
   f=(1/n)*(1/h)*sum(w)
   return(f)

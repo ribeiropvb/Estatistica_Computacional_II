@@ -1,3 +1,4 @@
+library(tidyverse)
 
 stat_kernel <- function(X, h, x, kernel = c('gaussian','epanechnikov','rectangular','triangular','biweight','cosine')){
   kernel <- match.arg(kernel)

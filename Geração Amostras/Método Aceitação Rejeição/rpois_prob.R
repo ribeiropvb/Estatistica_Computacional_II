@@ -1,3 +1,6 @@
+# Referência:
+  ## https://rstudio-pubs-static.s3.amazonaws.com/592218_656d41b142fb43d880455ed47afff64e.html
+
 lambda= 3 # parameter of the distribution 
 n=1000 # sample size
 set.seed(1001)

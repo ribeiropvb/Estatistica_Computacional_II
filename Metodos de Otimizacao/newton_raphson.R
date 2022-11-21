@@ -43,11 +43,8 @@ NR_H <- function(f, x0, par, tol = 1e-08, maxiter = 1000){
   cont <- 1
   
   while(abs(dif_)>= tol & cont<=maxiter){
-    #cat("cont+1=", cont+1, "\n")
     theta[ ,cont+1] <- theta[ ,cont] - solve(hessian(log_vero, theta[ ,cont]))%*%grad(log_vero, theta[ ,cont])
-    #cat("theta[", cont+1, "]=", theta[ ,cont+1], "\n")
     dif_ <- sqrt(sum((theta[ ,cont+1]-theta[ ,cont])^2))
-    #cat("dif=", dif_, "\n")
     cont <- cont+1
   }
   x <- theta[, cont]

@@ -36,6 +36,7 @@ newton.raphson <- function(f, a, b, tol = 1e-5, n = 1000) {
 
 NR_H <- function(f, x0, par, tol = 1e-08, maxiter = 1000){
   
+  require(numDeriv)
   dif_ <- 1
   theta <- matrix(NA, nrow=2, ncol=maxiter)
   theta[, 1] <- x0
